@@ -1,0 +1,569 @@
+
+$block_width: 1169px / 1366px * 100%
+
+body
+    width: 100%
+    font-family: "Roboto", "Arial", serif
+    background-color: #fff
+    font-size: 14px
+    font-weight: 400
+    @media (max-width: 768px)
+        overflow: hidden
+
+h1,h2,h3
+    font-family: "Playfair Display", sans-serif
+    color: #1B1A17
+
+.header
+    display: flex
+    justify-content: center
+    margin-top: 35px
+    &__container
+        display: flex
+        justify-content: space-between
+        width: $block_width
+        @media (max-width: 768px)
+            flex-direction: column
+            align-items: center
+
+    &__nav
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        @media (max-width: 768px)
+            margin-top: 15px
+    &__item
+        color: #555248
+        &:not(:last-child)
+            margin-right: 65px
+            @media (max-width: 992px)
+                margin-right: 35px
+        & a
+            text-decoration: none
+            color: #555248
+    &__more
+        @media (max-width: 768px)
+            margin-top: 15px
+
+    &__more a:not(:last-child)
+        margin-right: 23px
+        text-decoration: none
+
+.main
+    display: flex
+    justify-content: center
+    margin-bottom: -60px
+    @media (max-width: 992px)
+        margin-bottom: 0
+        @media (max-width: 850px)
+            margin-bottom: -70px
+            @media (max-width: 768px)
+                margin-bottom: -120px
+                @media (max-width: 576px)
+                    margin-bottom: 0
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 82%
+        margin: 0 auto
+        overflow: hidden
+        position: relative
+        @media (max-width: 992px)
+            margin-top: -60px
+            @media (max-width: 768px)
+                margin-top: -90px
+                @media (max-width: 576px)
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    margin-top: 15px
+
+    &__container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding-left: 60px
+        margin: 0 auto
+        overflow: hidden
+
+        @media (max-width: 576px)
+            padding: 0
+            align-items: center
+            order: 1
+            margin-bottom: 30px
+
+        & .line1
+            position: relative
+            &::before
+                display: block
+                width: 50px
+                content: ''
+                position: absolute
+                border-bottom: 1px solid #8B8371
+                top: 30px
+                right: 102%
+                @media (max-width: 992px)
+                    width: 30px
+                    top: 23px
+                    @media (max-width: 576px)
+                        display: none
+
+    &__header
+        font-size: 45px
+        @media (max-width: 992px)
+            font-size: 32px
+            @media (max-width: 768px)
+                font-size: 24px
+
+    &__title
+        font-size: 30px
+        margin: 16px 0 39px
+        @media (max-width: 768px)
+            font-size: 16px
+            margin: 16px 0 15px
+            @media (max-width: 576px)
+                text-align: center
+
+    &__text
+        color: rgba(27, 26, 23, 0.82)
+        width: 50%
+        @media (max-width: 576px)
+            text-align: center
+    &__button
+        width: 205px
+        height: 64px
+        color: #fff
+        font-size: 12px
+        background-color: #444240
+        margin-top: 64px
+        text-transform: uppercase
+        border: none
+        @media (max-width: 768px)
+            width: 150px
+            margin-top: 30px
+
+    &__block
+        display: flex
+        position: relative
+        margin: 0 auto
+        overflow: hidden
+        top: -60px
+        left: -110px
+        height: 844px
+        width: 698px
+        @media (max-width: 992px)
+            top: 90px
+            left: -50px
+            height: 644px
+            @media (max-width: 576px)
+                top: 0
+                left: 0
+                height: 250px
+                width: auto
+                position: static
+                justify-content: center
+                margin-bottom: 30px
+
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+        @media (max-width: 576px)
+            position: static
+
+    &__price
+        position: absolute
+        top: 16%
+        left: 45%
+        font-size: 16px
+        color: #1B1A17
+        @media (max-width: 1220px)
+            left: 38%
+            @media (max-width: 992px)
+                display: none
+        & .line2
+            position: relative
+            &::after
+                display: block
+                width: 50px
+                content: ''
+                position: absolute
+                border-bottom: 1px solid #8B8371
+                top: 50%
+                left: 68px
+
+    &__diam
+        position: absolute
+        top: 69.5%
+        left: 86%
+        font-size: 16px
+        color: #1B1A17
+        @media (max-width: 1220px)
+            top: 45%
+            @media (max-width: 992px)
+                display: none
+        & .line3
+            position: relative
+            &::before
+                display: block
+                width: 50px
+                content: ''
+                position: absolute
+                border-bottom: 1px solid #8B8371
+                top: 50%
+                right: 10px
+
+.popular
+    display: flex
+    justify-content: center
+    &__container
+        display: flex
+        width: $block_width
+        flex-direction: column
+        align-items: center
+
+    &__header
+        font-size: 32px
+        color: #1B1A17
+        text-align: center
+        @media (max-width: 992px)
+            font-size: 24px
+
+    & .button-wrapper
+        display: flex
+        justify-content: end
+        @media (max-width: 768px)
+            margin-top: 15px
+        & button
+            background-color: inherit
+            border: none
+            color: #444240
+            font-size: 16px
+            font-weight: 500
+            position: relative
+            margin-right: 98px
+            & .line4
+                position: relative
+            &::before
+                display: block
+                width: 80%
+                content: ''
+                position: absolute
+                border-bottom: 1px solid #8B8371
+                top: 100%
+                right: 10px
+
+    & .card-wrapper
+        display: flex
+        justify-content: space-between
+        margin-top: 25px
+        @media (max-width: 768px)
+            justify-content: center
+            align-items: center
+            @media (max-width: 576px)
+                flex-direction: column
+    & .card
+
+        padding: 40px
+        @media (max-width: 768px)
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+        &__header
+            font-weight: 700
+            @media (max-width: 768px)
+                text-align: center
+        &__price
+            font-size: 12px
+            color: #1B1A17
+            margin-top: 10px
+            @media (max-width: 768px)
+                text-align: center
+        &__button
+            font-size: 16px
+            color: #1B1A17
+            border: none
+            background-color: inherit
+            position: relative
+            margin-left: 60px
+            @media (max-width: 768px)
+                font-size: 12px
+
+            & span
+                position: relative
+            &::before
+                display: block
+                width: 30px
+                content: ''
+                position: absolute
+                border-bottom: 1px solid #8B8371
+                top: 50%
+                left: -40px
+.quality
+    display: flex
+    justify-content: center
+    background-color: #fff
+    background: url('../img/lines_banner.png') no-repeat
+    background-position-x: 70%
+    overflow: hidden
+    flex-wrap: wrap
+    @media (max-width: 992px)
+        background: none
+    & .image
+        position: relative
+        display: flex
+        top: 0
+        left: 3%
+        margin: 52px 0
+        @media (max-width: 992px)
+            margin: 32px 0
+            left: 7%
+            @media (max-width: 768px)
+                position: static
+                flex-direction: column
+                align-items: center
+                justify-content: space-around
+                left: 0
+
+    &__img
+        @media (max-width: 992px)
+            width: 380px
+            @media (max-width: 768px)
+                width: auto
+                height: auto
+                margin-top: 15px
+    & .block
+        position: absolute
+        top: -53px
+        left: -185px
+        height: 519px
+        width: 468px
+        background-color: #F7F5EF
+        z-index: -1
+        @media (max-width: 992px)
+            display: none
+
+    &__container
+        display: flex
+        flex-direction: column
+        padding-left: 70px
+        width: 70%
+        order: 1
+        @media (max-width: 768px)
+            align-items: center
+            order: -1
+            padding-left: 0
+
+    &__header
+        font-size: 32px
+        color: #1B1A17
+        @media (max-width: 992px)
+            font-size: 24px
+
+    &__text
+        font-size: 16px
+        color: #444240
+        line-height: 24px
+        width: 50%
+        margin: 38px 0 45px
+        @media (max-width: 768px)
+            text-align: center
+    &__button
+        width: 205px
+        height: 64px
+        color: #fff
+        background-color: #D4B098
+        font-size: 12px
+        text-transform: uppercase
+        font-weight: 500
+        border: none
+
+    & .switch-wrapper
+        display: flex
+        align-items: end
+        justify-content: end
+        position: relative
+        @media (max-width: 768px)
+            margin-top: 10px
+            justify-content: center
+            align-items: center
+            position: static
+
+    &__switch
+        position: absolute
+        top: 105%
+        left: -70px
+        color: #1B1A17
+        font-size: 12px
+        @media (max-width: 768px)
+            position: relative
+            top: 0
+            left: 0
+        &::before
+            display: block
+            content: '<'
+            position: absolute
+            top: 0
+            left: -20px
+            color: #1B1A17
+            cursor: pointer
+        &::after
+            display: block
+            content: '>'
+            position: absolute
+            top: 0
+            left: 27px
+            color: #1B1A17
+            cursor: pointer
+.news
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 60px
+
+    @media (max-width: 576px)
+        margin-top: 10px
+
+    &__container
+        display: flex
+        justify-content: space-between
+        width: 86%
+        @media (max-width: 992px)
+            justify-content: center
+            @media (max-width: 768px)
+                flex-direction: column
+                align-items: center
+
+    &__block
+        display: flex
+        flex-direction: column
+        justify-content: center
+        max-width: 530px
+        @media (max-width: 992px)
+            max-width: 330px
+            @media (max-width: 768px)
+                align-items: center
+                max-width: 100%
+
+    &__header
+        font-size: 32px
+        color: #1B1A17
+        @media (max-width: 992px)
+            font-size: 24px
+            @media (max-width: 768px)
+                text-align: center
+
+    &__text
+        font-size: 16px
+        color: #444240
+        margin: 40px 0 118px
+        width: 54%
+        font-weight: 400
+        @media (max-width: 768px)
+            margin: 30px 0 30px
+            text-align: center
+    &__span
+        font-weight: 700
+        color: #262421
+    &__socials
+        & img
+            cursor: pointer
+            &:not(:last-child)
+                margin-right: 18px
+
+    &__photo
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        flex-grow: 1
+        height: 460px
+        @media (max-width: 992px)
+            max-width: 330px
+            @media (max-width: 768px)
+                min-width: 100%
+                height: 360px
+                @media (max-width: 576px)
+                    height: 300px
+
+    &__item1
+        margin-right: 10px
+        margin-bottom: 10px
+        max-height: 100%
+        max-width: 100%
+        flex-grow: 0
+        @media (max-width: 1280px)
+            height: 39%
+            @media (max-width: 1200px)
+                height: 24%
+                @media (max-width: 768px)
+                    height: 39%
+                    @media (max-width: 576px)
+                        height: 27%
+
+    &__item2
+        margin-right: 10px
+        max-height: 100%
+        max-width: 100%
+        flex-grow: 0
+        @media (max-width: 1280px)
+            height: 39%
+            @media (max-width: 1200px)
+                height: 24%
+                @media (max-width: 768px)
+                    height: 39%
+                    @media (max-width: 576px)
+                        height: 27%
+
+    &__item3
+        max-height: 100%
+        max-width: 100%
+        flex-grow: 0
+        @media (max-width: 1280px)
+            height: 80%
+            @media (max-width: 1200px)
+                height: 50%
+                @media (max-width: 768px)
+                    height: 80%
+                    @media (max-width: 576px)
+                        height: 56%
+.footer
+    display: flex
+    justify-content: center
+    margin-top: 90px
+    background-color: #444240
+    color: #fff
+    font-size: 12px
+    @media (max-width: 992px)
+        margin-top: 20px
+    &__container
+        display: flex
+        justify-content: space-between
+        width: 73%
+        margin: 79px 0 67px
+        @media (max-width: 992px)
+            justify-content: center
+            flex-wrap: wrap
+        & div
+            @media (max-width: 992px)
+                margin-right: 15px
+
+        & h4
+            color: #fff
+            font-size: 14px
+            font-weight: 700
+            text-transform: uppercase
+            @media (max-width: 992px)
+                margin-top: 15px
+        & ul li
+            margin-top: 15px
+            cursor: pointer
+            &:first-child
+                margin-top: 33px
+
+    &__phone
+        margin: 23px 0 15px
+        font-weight: 400
